@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "altrank"
+version = "0.1.0"
+description = "Optimal safe reordering of ordered regex rule lists"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Joshua Nishanth Tarun A" }]
+keywords = ["regex", "lexer", "pygments", "scheduling", "optimization"]
+dependencies = ["pygments>=2.14"]
+
+[project.optional-dependencies]
+bench = ["matplotlib>=3.5"]
+
+[project.scripts]
+altrank = "altrank.cli:main"
+
+[tool.setuptools]
+packages = ["altrank"]
